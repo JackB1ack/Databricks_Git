@@ -59,3 +59,9 @@ tmp = diamonds.join(retailers, '_c0')
 # COMMAND ----------
 
 display(tmp.head(100))
+
+# COMMAND ----------
+
+# MAGIC %sql
+# MAGIC 
+# MAGIC SELECT cut, avg(price) as price FROM diamonds_view GROUP BY cut ORDER BY price
